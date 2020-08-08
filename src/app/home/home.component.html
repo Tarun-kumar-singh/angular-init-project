@@ -1,0 +1,6 @@
+
+<p *ngIf="!isLoggedIn" class="text-primary">You are not logged in.</p>
+<p *ngIf="isLoggedIn" class="text-success">You are logged In </p>
+<p *ngIf="isErrorLogInMessage" class="text-danger">{{ errorLogInMessage }}</p>
+<button class="btn btn-primary" (click)="onLogIn()">Log In</button>
+<button class="btn btn-warning" (click)="onLogout()">Log Out </button>

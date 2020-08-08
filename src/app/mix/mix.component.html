@@ -1,0 +1,58 @@
+
+
+<p>dynamic form</p>
+
+<hr>
+<h4>Example of Flex</h4>
+
+<div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="0"
+     fxLayoutGap.xs="0">
+  <div class="item item-1" fxFlex="50%">Item 1</div>
+  <div class="item item-2" fxFlex = "50%">Item 2</div>
+</div>
+
+<hr>
+
+
+ <h3>1</h3>
+ <p>Example of async pipes</p>
+ <p>App Status</p>
+ <p class="badge badge-secondary" *ngIf="offLine">Offline</p>
+ <span class="badge badge-success">{{ appStatus | async }}</span>
+
+<!--  
+<div>
+    <p>Query Params example  </p>
+    <button (click)="showToaster()">
+        Show Toaster
+    </button>
+</div> -->
+
+<hr>
+<h3>2</h3>
+    <div>
+        <p>Example of pipe </p>
+        <p>date -->> date format with medium parameter --> Uppercase format</p>
+        <p>{{ date }}</p><p>{{ date | date : 'medium'}}</p> <p>{{ date | date : 'medium' | uppercase }}</p>
+    </div>
+
+<hr>
+<h3>3</h3>
+
+    <div>
+        <p>Example of custom pipe, To produce the abbreviation</p>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Input any string</label>
+            <input 
+                type="text" 
+                class="form-control"
+                [(ngModel)] = "stringValue"
+                (change)="onChange()"
+                id="formGroupExampleInput" />
+          </div>
+        <p *ngIf="stringValue">{{ stringValue | abbreviate | uppercase }}</p>
+    </div>

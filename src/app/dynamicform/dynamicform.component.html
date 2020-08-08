@@ -1,0 +1,6 @@
+<p>dynamicform works!</p>
+<form [formGroup]="form">
+    <input type="checkbox" formControlName="optionA"> Option A
+    <input type="checkbox" formControlName="optionB"> Option B
+    <input formControlName="optionBExtra" placeholder="Reason" *ngIf="optionBExtra">
+  </form>
